@@ -1,0 +1,33 @@
+import java.util.Scanner;
+import java.lang.Math;
+
+public class HW_1 
+{
+
+	public static void main(String[] args)
+	{
+		Scanner kb = new Scanner(System.in);
+		
+		double radius, numSphere;
+		double totalVol = 0;
+		double volume = 0;
+		
+		System.out.println("How many spheres will be included in your total volume?");
+		numSphere = kb.nextDouble();
+		
+		for (int i=0;i<numSphere;i++)
+		{
+			System.out.println("Please enter the radius of your sphere.");
+			radius = kb.nextDouble();
+			
+			volume = Math.PI* 4/3* radius* radius* radius;
+			
+			totalVol = totalVol + volume;
+		}
+			
+		System.out.println("The total volume of your spheres is: " + totalVol + " inches cubed.");
+		
+		kb.close();
+		}
+
+}
