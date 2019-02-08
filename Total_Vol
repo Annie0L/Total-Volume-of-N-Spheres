@@ -1,7 +1,7 @@
 import java.util.Scanner;
 import java.lang.Math;
 
-public class N_Spheres 
+public class boopbeep 
 {
 
 	public static void main(String[] args)
@@ -11,21 +11,24 @@ public class N_Spheres
 		double radius, numSphere;
 		double totalVol = 0;
 		double volume = 0;
+		double newVol = 0;
 		
 		System.out.println("How many spheres will be included in your total volume?");
 		numSphere = kb.nextDouble();
 		
+		System.out.println("Please enter the radius of your sphere.");
+		radius = kb.nextDouble();
+		
 		for (int i=0;i<numSphere;i++)
 		{
-			System.out.println("Please enter the radius of your sphere.");
-			radius = kb.nextDouble();
-			
 			volume = Math.PI* 4/3* radius* radius* radius;
 			
 			totalVol = totalVol + volume;
+			
+			newVol = Math.round(totalVol);
 		}
 			
-		System.out.println("The total volume of your spheres is: " + totalVol + " inches cubed.");
+		System.out.println("The total volume of your spheres is: " + newVol + " inches cubed.");
 		
 		kb.close();
 		}
